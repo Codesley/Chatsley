@@ -2,23 +2,39 @@
 <div class="pt-52">
   <h1 class="text-7xl text-white text-center">Signup</h1>
 </div>
-<form method="post" action=".">
+<form method="post" action="." class="text-center mt-16">
   {% csrf_token %}
-  <div>
-    <label class="text-white">First Name</label>
-    <input type="text" name="first_name" />
+  <div class="mb-10">
+    <input
+      type="text"
+      name="first_name"
+      placeholder="First Name"
+      class="text-center rounded text-4xl"
+    />
   </div>
-  <div>
-    <label class="text-white">Last Name</label>
-    <input type="text" name="last_name" />
+  <div class="mb-10">
+    <input
+      type="text"
+      name="last_name"
+      placeholder="Last Name"
+      class="text-center rounded text-4xl"
+    />
   </div>
+  <div class="mb-10">
+    <input
+      type="text"
+      name="username"
+      placeholder="Username"
+      class="text-center rounded text-4xl"
+    />
+  </div class="mb-10">
   <div>
-    <label class="text-white">Username</label>
-    <input type="text" name="username" />
-  </div>
-  <div>
-    <label class="text-white">Password</label>
-    <input type="text" name="password" />
+    <input
+      type="text"
+      name="password"
+      placeholder="Password"
+      class="text-center rounded text-4xl"
+    />
   </div>
 </form>
 {% endblock %}
