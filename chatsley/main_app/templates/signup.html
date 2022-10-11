@@ -2,6 +2,23 @@
 <div class="pt-52">
   <h1 class="text-7xl text-white text-center">Signup</h1>
 </div>
-
+<form method="post" action=".">
+  {% csrf_token %}
+  <div>
+    <label class="text-white">First Name</label>
+    <input type="text" name="first_name" />
+  </div>
+  <div>
+    <label class="text-white">Last Name</label>
+    <input type="text" name="last_name" />
+  </div>
+  <div>
+    <label class="text-white">Username</label>
+    <input type="text" name="username" />
+  </div>
+  <div>
+    <label class="text-white">Password</label>
+    <input type="text" name="password" />
+  </div>
+</form>
 {% endblock %}
-bg-gradient-to-r from-green-300 via-blue-500 to-purple-600
