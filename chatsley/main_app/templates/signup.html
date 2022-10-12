@@ -7,35 +7,38 @@
   <div class="mb-10">
     <input
       type="text"
-      name="first_name"
-      placeholder="First Name"
-      class="text-center rounded text-4xl"
-    />
-  </div>
-  <div class="mb-10">
-    <input
-      type="text"
-      name="last_name"
-      placeholder="Last Name"
-      class="text-center rounded text-4xl"
-    />
-  </div>
-  <div class="mb-10">
-    <input
-      type="text"
       name="username"
       placeholder="Username"
       class="text-center rounded text-4xl"
     />
-  </div class="mb-10">
-  <div class ="mb-10">
+  </div>
+  <div class="mb-10">
     <input
-      type="text"
-      name="password"
+      type="password"
+      name="password1"
       placeholder="Password"
       class="text-center rounded text-4xl"
     />
   </div>
+  <div class="mb-10">
+    <input
+      type="password"
+      name="password2"
+      placeholder="Confirm Password"
+      class="text-center rounded text-4xl"
+    />
+  </div class="mb-10">
+
+{% if form.errors %}
+    {% for field in form %}   
+        {% for error in field.errors %}
+        <div class = "mb-5 p-4 rounded-xl bg-red-300 text-white">
+            <p>{{ error|escape }}</p>
+        </div>
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
   <button class="bg-white text-gray-400 hover:bg-slate-500 font-bold py-2 px-4 rounded">Submit</button>
 </form>
 {% endblock %}
