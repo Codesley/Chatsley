@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('main_app.urls')),
+    path('rooms/', include('chatrooms.urls')), #all points beginning with rooms will use the rooms.url route 
     path('admin/', admin.site.urls),
 ]
