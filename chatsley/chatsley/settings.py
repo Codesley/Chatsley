@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'channels',
     'main_app',
+    'chatrooms',
 ]
 
 MIDDLEWARE = [
