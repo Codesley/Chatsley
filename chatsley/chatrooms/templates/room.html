@@ -42,6 +42,24 @@
         + roomName
         + '/'
     );
+
+    chatSocket.onmessage = function(e) {
+        console.log('onmessage')
+        const data = JSON.parse(e.data);
+        if (data.message) {
+            let html = '<div class = "bg-gray-300 rounded">';
+                html +=  '<p>' + data.username + '</p>';
+                html += '<p>' + data.message + '</p></div>';
+                document.querySelector('#chat-messages').innerHTML += html;
+        } else {
+            alert('No message')
+        }
+    }
+    
+    chatSocket.onclose = function(e) {
+        console.log('onclose')
+    }
+
     document.querySelector('#chat-message-submit').onclick = function(e){
         const messageInputDom = document.querySelector('#chat-message-input');
         const message = messageInputDom.value;
