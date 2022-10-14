@@ -23,14 +23,14 @@
 <div class = "bg-white rounded">
     <form method = "post" action="."  class = "flex">
         <input type = "text" name ="content" placeholder ="Type message here" id = "chat-message-input">
-        <button class="bg-white text-gray-400 hover:bg-slate-500 font-bold py-2 px-4 rounded" id = "chate-message-submit">Submit</button>
+        <button class="bg-white text-gray-400 hover:bg-slate-500 font-bold py-2 px-4 rounded" id = "chat-message-submit">Submit</button>
     </form>
 </div>
 {% endblock %}
 
 {% block scripts %}
 {{ room.slug|json_script:"json-roomname"}}
-{{ request.user.username}|json_script:"json-username"}}
+{{ request.user.username|json_script:"json-username" }}
 <script>
     const roomName = JSON.parse(document.getElementById('json-roomname').textContent);
     const userName = JSON.parse(document.getElementById('json-username').textContent);
@@ -61,6 +61,8 @@
     }
 
     document.querySelector('#chat-message-submit').onclick = function(e){
+        e.preventDefault();
+
         const messageInputDom = document.querySelector('#chat-message-input');
         const message = messageInputDom.value;
 
@@ -70,6 +72,7 @@
             'room': roomName
         }))
         messageInputDom.value = '';
+        return false;
     }
 </script>
 {% endblock %}
