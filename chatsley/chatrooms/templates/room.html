@@ -46,6 +46,7 @@
                 html +=  '<p>' + data.username + '</p>';
                 html += '<p>' + data.message + '</p></div>';
                 document.querySelector('#chat-messages').innerHTML += html;
+                scroll();
         } else {
             alert('No message')
         }
@@ -69,5 +70,12 @@
         messageInputDom.value = '';
         return false;
     }
+
+    function scroll(){
+        const objDiv = document.querySelector('#chat-messages');
+        objDiv.scrollTop = objDiv.scrollHeight;
+    }
+    scroll();
+
 </script>
 {% endblock %}
