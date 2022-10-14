@@ -74,7 +74,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'chatsley.wsgi.application'
 ASGI_APPLICATION = 'chatsley.asgi.application'
-
+CHANNEL_LAYERS = {
+    'default':{
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -85,7 +89,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+# messages that are sent are stored in the memory of the server, if server is shot off then messages are lost 
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
