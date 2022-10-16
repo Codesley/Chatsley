@@ -13,3 +13,10 @@ Chatsley is a real time chat application built using Django. Users are able to c
 <img width="1278" alt="Screen Shot 2022-10-16 at 4 58 58 PM" src="https://user-images.githubusercontent.com/107660606/196060387-471ef27d-1286-4866-89ae-5ad1ca0a67b3.png">
 <img width="1279" alt="Screen Shot 2022-10-16 at 4 59 12 PM" src="https://user-images.githubusercontent.com/107660606/196060391-0f2a0a8e-edf9-422e-b5c0-8ed1f55f0d9e.png">
 
+## Challenges
+
+## Future Goals
+- Personal profile additions (Profile picture, bio, etc.)
+- Ability to create chatrooms outside of admin controls
+- Media messaging (images, videos, etc.)
+- Individual messaging (User to user)
