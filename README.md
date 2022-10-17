@@ -19,6 +19,7 @@ Chatsley is a real time chat application built using Django. Users are able to c
 ## Challenges
 - Django Setup 
 - Deployment 
+- Network setup 
 
 ## Project Findings
 - Django is very resourceful when its tools align with your ideas.
