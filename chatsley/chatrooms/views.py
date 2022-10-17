@@ -1,9 +1,9 @@
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required #Make sure user is authenticated 
 from django.shortcuts import render
 from .models import Message, Room
 # Create your views here.
 
-@login_required
+@login_required 
 def rooms(request):
     rooms = Room.objects.all()
     return render(request, 'rooms.html', {'rooms': rooms})
