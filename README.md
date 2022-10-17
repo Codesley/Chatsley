@@ -4,7 +4,7 @@
 Chatsley is a real time chat application built using Django. Users are able to create profiles and join chatrooms where they can communicate with each other simultaneously through text-based messaging. I wanted to challenge myself to create a website where you could see real time interaction among multiple people. Having recently learned Django, I chose it as the framework for my project for the vast amount of tools that came alongside it. 
 
 ## Technologies Used 
-**Python | Django | Tailwind CSS  | HTML | JavaScript**
+**Python | Django | Tailwind CSS  | HTML**
 
 ## Application Images  
 <img width="1276" alt="Screen Shot 2022-10-16 at 4 57 43 PM" src="https://user-images.githubusercontent.com/107660606/196060374-d1656641-2ac7-49fd-a5e0-019b6c9cfe03.png">
